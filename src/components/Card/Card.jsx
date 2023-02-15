@@ -12,8 +12,8 @@ const Card = () => {
                         </path>
                     </svg>
                 </div>
-                <p className="name"> Jhon Doe
-                    <span>CEO of WritBook
+                <p className="name"> Pichi Project
+                    <span>Bloopark Developer
                     </span>
                 </p>
             </div>
