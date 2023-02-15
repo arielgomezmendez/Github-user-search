@@ -18,3 +18,8 @@ html {
   justify-content: space-around;
   align-content: space-around;
 }
+
+.title {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}

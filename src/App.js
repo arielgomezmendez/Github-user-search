@@ -5,7 +5,7 @@ import Search from "./components/Search/Search";
 function App() {
   return (
     <div className="App">
-      <h1>User Search on Github</h1>
+      <h1 className="title">User Search on Github</h1>
       <Search />
       <Card />
     </div>
