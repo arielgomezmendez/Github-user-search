@@ -30,7 +30,7 @@
 }
 
 .search__input::-webkit-input-placeholder {
-    font-weight: 100;
+    font-weight: 500;
     color: #ccc;
 }
 
