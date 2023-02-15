@@ -6,16 +6,18 @@
 
 .search__input {
     font-family: inherit;
-    font-size: inherit;
+    font-size: 1.8rem;
     background-color: #f4f2f2;
     border: none;
     color: #646464;
-    padding: 0.7rem 1rem;
+    padding: 0.7rem 2rem;
     border-radius: 30px;
-    width: 12em;
+    width: 32rem;
+    height: 4rem;
     transition: all ease-in-out .5s;
     margin-right: -2rem;
 }
+
 
 .search__input:hover,
 .search__input:focus {
@@ -39,7 +41,8 @@
 .search__button {
     border: none;
     background-color: #f4f2f2;
-    margin-top: .1em;
+    margin-top: .01rem;
+
 }
 
 .search__button:hover {
@@ -50,4 +53,5 @@
     height: 1.3em;
     width: 1.3em;
     fill: #b4b4b4;
+
 }
