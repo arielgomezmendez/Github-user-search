@@ -1,4 +1,4 @@
-.card-client {
+.card {
     background: #2cb5a0;
     width: 13rem;
     padding-top: 2.5rem;
@@ -14,7 +14,7 @@
     transition: all 0.3s ease;
 }
 
-.card-client:hover {
+.card:hover {
     transform: translateY(-1rem);
 }
 
@@ -36,14 +36,14 @@
     fill: currentColor;
 }
 
-.name-client {
+.name {
     margin: 0;
     margin-top: 2rem;
     font-weight: 600;
     font-size: 1.8rem;
 }
 
-.name-client span {
+.name span {
     display: block;
     font-weight: 200;
     font-size: 1.6rem;

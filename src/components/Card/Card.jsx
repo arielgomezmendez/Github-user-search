@@ -4,7 +4,7 @@ import "./Card.css"
 const Card = () => {
     return (
         <div>
-            <div className="card-client">
+            <div className="card">
                 <div className="user-picture">
                     <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -12,7 +12,7 @@ const Card = () => {
                         </path>
                     </svg>
                 </div>
-                <p className="name-client"> Jhon Doe
+                <p className="name"> Jhon Doe
                     <span>CEO of WritBook
                     </span>
                 </p>
