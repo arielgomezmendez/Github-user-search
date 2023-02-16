@@ -53,10 +53,7 @@ const Card = () => {
       <div className="user-picture">
         <img src={userImage} />
       </div>
-      <p className="name">
-        {userName}
-        <span>Bloopark Developer</span>
-      </p>
+      <p className="name">{userName}</p>
     </div>
   );
 };
