@@ -27,7 +27,7 @@ const Card = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
         },
         body: data,
       });
