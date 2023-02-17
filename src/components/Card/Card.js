@@ -8,7 +8,7 @@ const Card = () => {
 
   const query = `
     query {
-        user(login: "arielgomezmendez") {
+        user(login: "rejamen") {
         name
         avatarUrl
         }
@@ -27,7 +27,7 @@ const Card = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
         },
         body: data,
       });
