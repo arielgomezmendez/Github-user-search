@@ -10,7 +10,7 @@ const Search = () => {
   };
   console.log(inputValue);
   return (
-    <div className="search">
+    <form className="search">
       <input
         type="text"
         className="search__input"
@@ -29,7 +29,7 @@ const Search = () => {
           </g>
         </svg>
       </button>
-    </div>
+    </form>
   );
 };
 
