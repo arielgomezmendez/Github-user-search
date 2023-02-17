@@ -5,8 +5,10 @@ import { useEffect } from "react";
 
 const Card = () => {
   const endpoint = "https://api.github.com/graphql";
+
   //String template for change the login
   const userLogin = "rejamen";
+
   const query = `
     query {
         user(login: "${userLogin}") {
