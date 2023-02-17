@@ -5,10 +5,11 @@ import { useEffect } from "react";
 
 const Card = () => {
   const endpoint = "https://api.github.com/graphql";
-
+  //String template for change the login
+  const userLogin = "rejamen";
   const query = `
     query {
-        user(login: "rejamen") {
+        user(login: "${userLogin}") {
         name
         avatarUrl
         }
@@ -27,7 +28,7 @@ const Card = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
         },
         body: data,
       });
@@ -40,6 +41,7 @@ const Card = () => {
       /*Update the states with the url and name of user*/
       setUserImage(newUserImage);
       setUserName(newUserName);
+      let error = "Error";
     } catch (error) {
       console.log(error);
     }
