@@ -48,13 +48,11 @@ function App() {
       console.log(error);
     }
   }
-  useEffect(() => {
-    fetchData();
-  }, []);
+
   return (
     <div className="App">
       <h1 className="title">User Search on Github</h1>
-      <Search />
+      <Search fetchData={fetchData} />
       <Card />
     </div>
   );

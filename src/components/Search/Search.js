@@ -1,8 +1,9 @@
 import React from "react";
 import "./Search.css";
 import { useState } from "react";
+import { useEffect } from "react";
 
-const Search = () => {
+const Search = ({ fetchData }) => {
   const [inputValue, setInputValue] = useState("");
   //Function to get the input value using the onChange event
   const onchange = (event) => {
@@ -12,6 +13,7 @@ const Search = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     console.log(inputValue);
+    fetchData();
   };
   //console.log(inputValue);
 
