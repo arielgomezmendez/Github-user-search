@@ -8,9 +8,19 @@ const Search = () => {
   const onchange = (event) => {
     setInputValue(event.target.value);
   };
-  console.log(inputValue);
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    console.log(inputValue);
+  };
+  //console.log(inputValue);
+
+  //const [onSubmit, setOnSubmit] = useState("");
+
+  //setOnSubmit(inputValue);
+
   return (
-    <form className="search">
+    <form className="search" onSubmit={onSubmit}>
       <input
         type="text"
         className="search__input"
