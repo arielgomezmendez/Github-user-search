@@ -12,8 +12,12 @@ function App({ fetchData }) {
   return (
     <div className="App">
       <h1 className="title">User Search on Github</h1>
-      <Search fetchData={fetchData} />
-      <Card />
+      <Search
+        fetchData={fetchData}
+        setUserImage={setUserImage}
+        setUserName={setUserName}
+      />
+      <Card userName={userName} userImage={userImage} />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import "./Card.css";
 
 const Card = ({ userImage, userName }) => {
+  console.log(userName);
   return (
     <div className="card">
       <div className="user-picture">

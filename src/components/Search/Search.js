@@ -4,8 +4,8 @@ import { useState } from "react";
 
 const Search = ({ fetchData, setUserImage, setUserName }) => {
   const [inputValue, setInputValue] = useState("");
-  //Function to get the input value using the onChange event
 
+  //Function to get the input value using the onChange event
   const onchange = (event) => {
     setInputValue(event.target.value);
   };
@@ -29,7 +29,7 @@ const Search = ({ fetchData, setUserImage, setUserName }) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
         },
         body: data,
       });
@@ -51,8 +51,6 @@ const Search = ({ fetchData, setUserImage, setUserName }) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-
-    console.log("userLogin: " + userLogin);
     fetchData();
   };
 
