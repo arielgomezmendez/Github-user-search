@@ -1,7 +1,5 @@
 import React from "react";
 import "./Card.css";
-import { useState } from "react";
-import { useEffect } from "react";
 
 const Card = ({ userImage, userName }) => {
   return (
