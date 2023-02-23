@@ -29,7 +29,7 @@ const Search = ({ fetchData, setUserImage, setUserName }) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
         },
         body: data,
       });
