@@ -37,6 +37,12 @@
     fill: currentColor;
 }
 
+.user-picture img {
+    width: 14rem;
+    height: 14rem;
+}
+
+
 .name {
     margin-top: 2rem;
     font-weight: 600;
