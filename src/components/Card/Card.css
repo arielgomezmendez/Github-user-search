@@ -49,7 +49,23 @@
 
 
 .name {
+    text-align: center;
     margin-top: 2rem;
     font-weight: 600;
     font-size: 2.2rem;
+}
+
+.lines {
+    width: 18rem;
+    height: 6rem;
+    margin: 2rem auto;
+}
+
+.line1,
+.line2 {
+    width: 14rem;
+    height: 1rem;
+    background-color: #fff;
+    margin: 2.2rem auto;
+    border-radius: 4px;
 }

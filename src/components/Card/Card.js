@@ -15,6 +15,10 @@ const Card = ({ userImage, userName }) => {
           ></path>
         </svg>
       </div>
+      <div className="lines">
+        <div className="line1"></div>
+        <div className="line2"></div>
+      </div>
       <p className="name">{userName}</p>
     </div>
   );

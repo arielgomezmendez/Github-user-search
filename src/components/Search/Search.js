@@ -29,7 +29,7 @@ const Search = ({ fetchData, setUserImage, setUserName }) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
         },
         body: data,
       });
@@ -59,7 +59,7 @@ const Search = ({ fetchData, setUserImage, setUserName }) => {
       <input
         type="text"
         className="search__input"
-        placeholder="Type your text"
+        placeholder="User name ..."
         onChange={onchange}
       />
       <button className="search__button">
