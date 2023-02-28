@@ -1,8 +1,10 @@
 import React from "react";
 import "./Search.css";
-import { useState } from "react";
+import useSearchUser from "../apiService";
 
 const Search = ({ setUserImage, setUserName }) => {
+  const { fetchData } = useSearchUser();
+  const { onchange } = useSearchUser();
   const onSubmit = (event) => {
     event.preventDefault();
     fetchData();

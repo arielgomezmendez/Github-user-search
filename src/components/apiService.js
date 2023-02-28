@@ -24,7 +24,7 @@ export const useApiService = (setUserImage, setUserName) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
         },
         body: data,
       });
@@ -42,7 +42,7 @@ export const useApiService = (setUserImage, setUserName) => {
       console.log(error);
     }
   };
-  return { inputValue, onchange, onSubmit, fetchData };
+  return { inputValue, onchange, fetchData };
 };
 
-export default useSearchUser;
+export default useApiService;
