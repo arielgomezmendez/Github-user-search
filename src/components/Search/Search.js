@@ -2,53 +2,7 @@ import React from "react";
 import "./Search.css";
 import { useState } from "react";
 
-const Search = ({ fetchData, setUserImage, setUserName }) => {
-  const [inputValue, setInputValue] = useState("");
-
-  //Function to get the input value using the onChange event
-  const onchange = (event) => {
-    setInputValue(event.target.value);
-  };
-
-  const endpoint = "https://api.github.com/graphql";
-  let userLogin = inputValue;
-  const query = `
-    query {
-        user(login: "${userLogin}") {
-        name
-        avatarUrl
-        }
-    }`;
-
-  /*Send the query to the API server*/
-  async function fetchData() {
-    try {
-      console.log("Fetch data");
-      const data = JSON.stringify({ query });
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer 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`,
-        },
-        body: data,
-      });
-
-      const result = await response.json();
-      const newUserImage = result.data.user.avatarUrl;
-      const newUserName = result.data.user.name;
-      console.log(result);
-
-      /*Update the states with the url and name of user*/
-      setUserImage(newUserImage);
-      setUserName(newUserName);
-
-      let error = "Error";
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
+const Search = ({ setUserImage, setUserName }) => {
   const onSubmit = (event) => {
     event.preventDefault();
     fetchData();
@@ -59,7 +13,7 @@ const Search = ({ fetchData, setUserImage, setUserName }) => {
       <input
         type="text"
         className="search__input"
-        placeholder="User name ..."
+        placeholder="Type your text"
         onChange={onchange}
       />
       <button className="search__button">
@@ -79,3 +33,55 @@ const Search = ({ fetchData, setUserImage, setUserName }) => {
 };
 
 export default Search;
+
+{
+  /*
+  const [inputValue, setInputValue] = useState("");
+
+  //Function to get the input value using the onChange event
+  const onchange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const endpoint = "https://api.github.com/graphql";
+  let userLogin = inputValue;
+  const query = `
+    query {
+        user(login: "${userLogin}") {
+        name
+        avatarUrl
+        }
+    }`;
+
+  /*Send the query to the API server
+  async function fetchData() {
+    try {
+      console.log("Fetch data");
+      const data = JSON.stringify({ query });
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer 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`,
+        },
+        body: data,
+      });
+
+      const result = await response.json();
+      const newUserImage = result.data.user.avatarUrl;
+      const newUserName = result.data.user.name;
+      console.log(result);
+
+      /*Update the states with the url and name of user
+      setUserImage(newUserImage);
+      setUserName(newUserName);
+
+      let error = "Error";
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
+*/
+}
