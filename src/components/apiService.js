@@ -6,25 +6,28 @@ export const useApiService = (setUserImage, setUserName) => {
   const onchange = (event) => {
     setInputValue(event.target.value);
   };
-
+  console.log(inputValue);
   const endpoint = "https://api.github.com/graphql";
 
-  const fetchData = async () => {
-    try {
-      console.log("Fetch data");
-      const query = `
+  const query = `
         query {
             user(login: "${inputValue}") {
             name
             avatarUrl
             }
         }`;
+  console.log(query);
+
+  const fetchData = async () => {
+    try {
+      console.log("Fetch data");
+
       const data = JSON.stringify({ query });
       const response = await fetch(endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
         },
         body: data,
       });
