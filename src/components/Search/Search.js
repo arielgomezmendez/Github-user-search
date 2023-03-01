@@ -1,9 +1,32 @@
 import React from "react";
 import "./Search.css";
 import useApiService from "../useApiService";
+import { useState } from "react";
 
 const Search = ({ setUserImage, setUserName }) => {
-  const { fetchData, onchange } = useApiService(setUserImage, setUserName);
+  const [inputValue, setInputValue] = useState("");
+  const endpoint = "https://api.github.com/graphql";
+
+  const query = `
+        query {
+            user(login: "${inputValue}") {
+            name
+            avatarUrl
+            }
+        }`;
+
+  //Using the custom hook useApiService
+  const { fetchData } = useApiService(
+    setUserImage,
+    setUserName,
+    query,
+    endpoint
+  );
+
+  const onchange = (event) => {
+    setInputValue(event.target.value);
+  };
+
   const onSubmit = (event) => {
     event.preventDefault();
     fetchData();

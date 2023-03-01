@@ -15,6 +15,7 @@ const Card = ({ userImage, userName }) => {
           ></path>
         </svg>
       </div>
+      {/*Conditional rendering */}
       {!userName ? (
         <div className="lines">
           <div className="line1"></div>
